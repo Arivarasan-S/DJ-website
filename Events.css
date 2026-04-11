@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.overallbox{
+    background-color: black;
+}
+/* ----------------------------------  nav box---------------------- */
+.navbox{
+    z-index: 2;
+    position: fixed;
+    background-color: rgb(31, 30, 30);
+    backdrop-filter: blur(3px);
+    
+}
+.navbox img{
+    width: 100px;
+    height: 70px;
+}
+ul a{
+    position: relative;
+    padding: 7px 10px !important;
+}
+ ul a span,.book_listen a span{
+    width: 100%;
+    position: relative;
+    padding: 10px 15px !important;
+}
+ul a::after,.book_listen a::after{
+    content: "";
+    width: 0%;
+    height: 0px;
+    position: absolute;
+    z-index: -1;
+    right: 0px;
+    top: 0px;
+    border:none;
+    background-color: rgb(19, 18, 18) !important;
+    transition: all 0.3s;
+    transform: skew(-40deg);
+    
+    
+}
+ul a:hover::after,.book_listen a:hover::after{
+    width: 100%;
+    height: 86%;   
+}
+ul a::before,.book_listen a::before{
+     content: "";
+    width: 0%;
+    height: 0px;
+    position: absolute;
+    z-index: -1;
+    right: 0px;
+    top: 0px;
+    border:none;
+    background-color: rgb(24, 224, 231) !important;
+    transition: all 0.3s;
+    transform: scale(1.4) skew(-40deg);
+}
+ul a:hover::before,.book_listen a:hover::before{
+    width: 70%;
+    height: 50%;
+}
+
+a span::before{
+    content: "";
+    width: 0%;
+    height: 4px;
+    position: absolute;
+    z-index: -1;
+    right:0px;
+    bottom: 0px;
+    border:none;
+    background-color: rgb(19, 18, 18) !important;
+    transition: all 0.3s;
+    transform: scaleX(2.5) skew(-30deg);
+    
+    
+}
+a span:hover::before{
+    width: 30%;
+    
+}
+a span::after{
+    content: "";
+    width: 0%;
+    height: 4px;
+    position: absolute;
+    z-index: -1;
+    left:0px;
+    bottom: 0px;
+    border:none;
+    background-color: rgb(24, 224, 231)  !important;
+    transition: all 0.3s;
+    transform: scaleX(2.5) skew(-30deg);
+    text-shadow: 0px;
+    
+}
+a span:hover::after{
+    width: 20%;
+}
+
+ul a:hover{
+    color: white !important;
+}
+/* --------------------------------------------- header box----------------------- */
+.header_image{
+    position: relative;
+}
+video{
+    height: 100vh;
+    object-fit: cover;
+    filter: brightness(80%);
+}
+.title{
+    position: absolute;
+    margin-top: 250px;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+p,a{
+    font-size: 19px;
+}
+.title h1{
+    font-size: 110px;
+     font-family: "Rubik Glitch", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.title p{
+    font-family:monospace;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+}
+/* --------------------------------------- event contant ----------------------- */
+.search_but{
+    background-image: url("./Vector\ \(4\).png");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: 20px 9px;
+    background-color: rgba(255, 255, 255, 0.356);
+    border: 2px solid gray;
+}
+.drop_but{
+    background-color: rgba(255, 255, 255, 0.356) !important;
+    border: 2px solid gray;
+}
+.event_search{
+    justify-content: space-between;
+}
+.contant{
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+}
+.loc{
+    font-size: 16px;
+}
+.tbuy{
+    background-color: cyan;
+    color: black;
+    font-weight: bold;
+    
+}
+.tbuy:hover{
+    background-color: rgba(0, 255, 255, 0.151);
+    border: 2px solid cyan;
+    box-shadow: 0px 0px 15px cyan;
+    color: white;
+}
+.more{
+    background-color: rgba(51, 50, 50, 0.089);
+    border: 1px solid gray;
+    color: white;
+}
+.form_bg_color::placeholder{
+    color: white;
+}
+.form_bg_color{
+     background-color: rgb(68, 64, 64) !important;
+    border: 1px solid gray;
+    color: white !important;
+
+}
+.numbers{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    font-family: digital;
+    
+}
+.numbers >a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.numbers button{
+    color: black;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    border: none;
+    padding-bottom: 2px;
+    border-radius: 50%;
+    text-align: center;
+}
+@font-face {
+    font-family: digital;
+    src: url("./digital-7\ \(mono\ italic\).ttf");
+}
+.numbers>button>a{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+/* -------------------------------- footer --------------------------- */
+.email{
+    width: 500px;
+}
+.email:hover{
+    border: 2px solid cyan;
+    box-shadow: 0px 0px 15px cyan;
+   
+}
+.form_but:hover{
+    border: 2px solid cyan;
+    box-shadow: 0px 0px 5px cyan;
+    
+}
+.footer_box{
+    background-color: black;
+    color: cyan;
+}
+.footer_box a{
+    text-decoration: none;
+    color: cyan;
+}
+.footer_box span{
+    height: 50px;
+    border-right: 2px solid white;
+}
+.sub{
+    background-color: cyan;
+    color: black;
+}
+
+.sub:hover{
+    transform: scale(0.98);
+    background-color: rgb(144, 255, 255);
+    border: 1px solid rgb(144, 255, 255);
+    box-shadow: 0px 0px 20px cyan ;
+
+}
+@media screen and (min-width:300px) and (max-width:600px) {
+    ul a{
+    width: 128px;
+    position: relative;
+    padding: 7px 10px !important;
+    text-align: center;
+}
+.title h1{
+    font-size: 50px;
+     font-family: "Rubik Glitch", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.email{
+    width: 100%;
+    
+}
+
+.tbuy{
+    width: 50%;
+    background-color: cyan;
+    color: black;
+    font-weight: bold;
+    
+}
+.more{
+    width: 50%;
+    background-color: rgba(51, 50, 50, 0.089);
+    border: 1px solid gray;
+    color: white;
+}
+.buy_more{
+    display: grid;
+    /* background-color: blue; */
+}
+.Newest_but{
+    width: 100px !important;
+}
+
+}
+@media screen and (min-width:600px) and (max-width:900px){
+    ul a{
+    margin:auto ;
+    width: 128px;
+    position: relative;
+    padding: 7px 10px !important;
+} 
+.tbuy{
+    width: 50%;
+    background-color: cyan;
+    color: black;
+    font-weight: bold;
+    
+}
+.more{
+    width: 50%;
+    background-color: rgba(51, 50, 50, 0.089);
+    border: 1px solid gray;
+    color: white;
+}
+.Newest_but{
+    width: 100px !important;
+}
+.email{
+    width: 100%;
+    
+}   
+}
+@media screen and (min-width:900px) and (max-width:1200px) {
+    ul a{
+    margin:auto ;
+    width: 128px;
+    position: relative;
+    padding: 7px 10px !important;
+}
+.tbuy{
+    width: 50%;
+    background-color: cyan;
+    color: black;
+    font-weight: bold;
+    
+}
+.more{
+    width: 50%;
+    background-color: rgba(51, 50, 50, 0.089);
+    border: 1px solid gray;
+    color: white;
+}
+.email{
+    width: 100%;
+    
+} 
+}
+@media screen and (min-width:1200px) and (max-width:1272px) {
+    .email{
+    width: 400px;
+    
+} 
+}

@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.overallbox{
+    background-color: black;
+}
+/* ------------------------------- nav box ---------------------- */
+.navbox{
+    z-index: 2;
+    position: fixed;
+    background-color: rgb(31, 30, 30);
+    backdrop-filter: blur(3px);
+}
+.navbox img{
+    width: 100px;
+    height: 70px;
+}
+ul a{
+    position: relative;
+    padding: 7px 10px !important;
+}
+ ul a span,.book_listen a span{
+    width: 100%;
+    position: relative;
+    padding: 10px 15px !important;
+}
+ul a::after,.book_listen a::after{
+    content: "";
+    width: 0%;
+    height: 0px;
+    position: absolute;
+    z-index: -1;
+    right: 0px;
+    top: 0px;
+    border:none;
+    background-color: rgb(19, 18, 18) !important;
+    transition: all 0.3s;
+    transform: skew(-40deg);
+    
+    
+}
+ul a:hover::after,.book_listen a:hover::after{
+    width: 100%;
+    height: 86%;   
+}
+ul a::before,.book_listen a::before{
+     content: "";
+    width: 0%;
+    height: 0px;
+    position: absolute;
+    z-index: -1;
+    right: 0px;
+    top: 0px;
+    border:none;
+    background-color: rgb(24, 224, 231) !important;
+    transition: all 0.3s;
+    transform: scale(1.4) skew(-40deg);
+}
+ul a:hover::before,.book_listen a:hover::before{
+    width: 70%;
+    height: 50%;
+}
+
+a span::before{
+    content: "";
+    width: 0%;
+    height: 4px;
+    position: absolute;
+    z-index: -1;
+    right:0px;
+    bottom: 0px;
+    border:none;
+    background-color: rgb(19, 18, 18) !important;
+    transition: all 0.3s;
+    transform: scaleX(2.5) skew(-30deg);
+    
+    
+}
+a span:hover::before{
+    width: 30%;
+    
+}
+a span::after{
+    content: "";
+    width: 0%;
+    height: 4px;
+    position: absolute;
+    z-index: -1;
+    left:0px;
+    bottom: 0px;
+    border:none;
+    background-color: rgb(24, 224, 231)  !important;
+    transition: all 0.3s;
+    transform: scaleX(2.5) skew(-30deg);
+    text-shadow: 0px;
+    
+}
+a span:hover::after{
+    width: 20%;
+}
+
+ul a:hover{
+    color: white !important;
+}
+/* -----------------------------------------  header box-------------- */
+.header_image{
+    position: relative;
+    
+} 
+.title{
+    position: absolute;
+    margin-top: 250px;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+video{
+    height: 100vh;
+    object-fit: cover;
+    filter: brightness(90%);
+}
+p,a{
+    font-size: 19px;
+}
+.title h1{
+    font-size: 110px;
+     font-family: "Rubik Glitch", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+/* ----------------------- form ------------------- */
+.Subject,.textareas {
+    color: gray !important;
+}
+.send_but{
+    width: 120px;
+    background-color: cyan;
+    color: black;
+    border: none;
+}
+.book_inc {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: cyan;
+    
+    width: 120px;
+    height: 35px;
+}
+.book_inc a:nth-child(2){
+    background-color: white;
+    height: 22px;
+    padding-bottom: 25px;
+}
+.book_inc a{
+    text-decoration: none;
+    color: black;
+}
+.send_but:hover{
+    background-color: rgb(144, 255, 255);
+    border: 1px solid rgb(144, 255, 255);
+    box-shadow: 0px 0px 20px cyan ;
+}
+.form_img img{
+    border-radius: 20px;
+}
+/* -------------------------- footer ----------------------- */
+.email{
+    width: 500px;
+}
+.footer_box{
+    background-color: black;
+    color: cyan;
+}
+.footer_box a{
+    text-decoration: none;
+    color: cyan;
+}
+.footer_box span{
+    height: 50px;
+    border-right: 2px solid white;
+}
+.sub{
+    background-color: cyan;
+    color: black;
+}
+.sub:hover{
+    transform: scale(0.98);
+    background-color: rgb(144, 255, 255);
+    /* color: white; */
+    border: 1px solid rgb(144, 255, 255);
+    box-shadow: 0px 0px 20px cyan ;
+}
+
+@media screen and (min-width:300px) and (max-width:600px) {
+     ul a{
+    width: 128px;
+    position: relative;
+    padding: 7px 10px !important;
+    text-align: center;
+}
+    .email{
+    width: 100%;
+    
+} 
+.title h1{
+    font-size: 60px;
+     font-family: "Rubik Glitch", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.form_img img{
+    border-radius: 20px;
+    width: 100%;
+}
+}
+@media screen and (min-width:600px) and (max-width:900px) {
+    ul a{
+    width: 128px;
+    position: relative;
+    padding: 7px 10px !important;
+    text-align: center;
+}
+    
+    .email{
+    width: 100%;
+    
+} 
+}
+@media screen and (min-width:768px) and (max-width:900px) {
+    .form_img img{
+    border-radius: 20px;
+    width: 100%;
+    height: 390px;
+}
+    
+}
+
+@media screen and (min-width:900px) and (max-width:1200px) {
+    ul a{
+    width: 128px;
+    position: relative;
+    padding: 7px 10px !important;
+    text-align: center;
+}
+     
+    .email{
+    width: 100%;
+    
+} 
+.form_img img{
+    border-radius: 20px;
+    width: 90%;
+    height: 400px;
+}
+}
+@media screen and (min-width:1200px) and (max-width:1272px) {
+    .email{
+    width: 400px;
+    
+} 
+}
